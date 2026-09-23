@@ -1,0 +1,255 @@
+:root {
+  --surface: hsl(222, 28%, 8%);
+  --card:    hsl(222, 22%, 13%);
+  --text:    hsl(220, 20%, 90%);
+  --muted:   hsl(220, 12%, 66%);
+  --brand:   hsl(145, 63%, 55%);
+
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 1rem;
+  --sp-4: 1.5rem;
+  --sp-5: 2rem;
+  --sp-6: 3rem;
+
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+a {
+  color: var(--brand);
+  transition: color 200ms ease-out;
+}
+
+a:hover {
+  color: var(--text);
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hero"
+    "features"
+    "steps"
+    "signup";
+  gap: var(--sp-3);
+  padding: 0 var(--sp-3);
+}
+
+.hero     { grid-area: hero; }
+.features { grid-area: features; }
+.steps    { grid-area: steps; }
+.signup   { grid-area: signup; }
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--sp-5) var(--sp-4);
+  background: var(--card);
+  border-radius: var(--radius);
+}
+
+section > p {
+  color: var(--muted);
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-3);
+}
+
+.logo {
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.logo:hover {
+  color: var(--brand);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+}
+
+.nav-links a {
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.hero p {
+  font-size: 1.125rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+
+.button {
+  padding: var(--sp-2) var(--sp-4);
+  border: 2px solid var(--brand);
+  border-radius: var(--radius);
+  background: var(--brand);
+  color: var(--surface);
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: background 200ms ease-out;
+}
+
+.button:hover {
+  background: var(--text);
+  color: var(--surface);
+}
+
+.button-outline {
+  background: var(--card);
+  color: var(--brand);
+}
+
+.button-outline:hover {
+  background: var(--surface);
+  color: var(--brand);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+
+.card {
+  flex: 1 1 13rem;
+  padding: var(--sp-4);
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+.card h3 {
+  margin-bottom: var(--sp-2);
+  color: var(--brand);
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.steps ol {
+  margin: 0;
+  padding-left: var(--sp-4);
+}
+
+.steps li {
+  margin-bottom: var(--sp-1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+label {
+  font-weight: 700;
+}
+
+input {
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.signup .button {
+  margin-top: var(--sp-2);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-5) var(--sp-3);
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+
+  .page {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "hero     hero"
+      "features features"
+      "steps    signup";
+    gap: var(--sp-4);
+    padding: 0 8%;
+  }
+
+  .navbar {
+    padding: var(--sp-4) 8%;
+  }
+
+  .footer {
+    padding: var(--sp-5) 8%;
+  }
+
+  section {
+    padding: var(--sp-6) var(--sp-5);
+  }
+
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  .hero p {
+    width: 70%;
+  }
+}

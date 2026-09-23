@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HuntLog | Notes for bug bounty hunters</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a class="logo" href="#hero">HuntLog</a>
+
+    <nav class="nav-links" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#steps">How it works</a>
+      <a href="#signup">Join</a>
+    </nav>
+  </header>
+
+  <main class="page">
+
+    <section id="hero" class="hero">
+      <h1>Keep your bug bounty notes in one place</h1>
+      <p>
+        HuntLog is a simple notebook for bug bounty hunters. Save the scope of
+        each program, write notes while you test, and turn them into a report
+        when you find a bug.
+      </p>
+
+      <div class="buttons">
+        <a class="button" href="#signup">Join the beta</a>
+        <a class="button button-outline" href="#features">See features</a>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Features</h2>
+      <p>Everything you need while hunting, and nothing you don't.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Scope list</h3>
+          <p>Paste a program's scope once. HuntLog shows which targets are in scope and which are not.</p>
+        </div>
+
+        <div class="card">
+          <h3>Quick notes</h3>
+          <p>Write a note in seconds and tag it, so you can find it again later.</p>
+        </div>
+
+        <div class="card">
+          <h3>Report drafts</h3>
+          <p>Turn your notes into a report draft with the steps already written down.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="steps" class="steps">
+      <h2>How it works</h2>
+      <p>Three steps, the same for every program.</p>
+
+      <ol>
+        <li>Add the program and paste its scope.</li>
+        <li>Take notes while you test the targets.</li>
+        <li>Turn your notes into a report and submit it.</li>
+      </ol>
+    </section>
+
+    <section id="signup" class="signup">
+      <h2>Join the beta</h2>
+      <p>Leave your email and we will send you an invite.</p>
+
+      <form action="#signup" method="post">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+        <button class="button" type="submit">Send me an invite</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; CopyRights 2026 HuntLog.</p>
+    <a href="#hero">Back to top</a>
+  </footer>
+
+</body>
+</html>
